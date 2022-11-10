@@ -1,0 +1,33 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/anvil/secrets.yml
+  client_config: {}
+  server_config: {}
+cta: {preset: dashboard_tutorial, hint_run_immediately: true}
+package_name: Dashboardwalkthrough
+allow_embedding: false
+name: Business Dashboard
+runtime_options: {version: 2, server_version: python3-sandbox, client_version: '3',
+  server_spec: null}
+metadata: {}
+startup_form: Form1
+db_schema:
+- name: Revenue
+  id: 30797
+  python_name: revenue
+  columns:
+    RfvZYDZ7oNQ=:
+      name: date
+      type: date
+      admin_ui: {order: 1, width: 200}
+    x2qvV9IzDfY=:
+      name: amount
+      type: number
+      admin_ui: {order: 0, width: 200}
+  access: {python_name: revenue, app_id: MNIPHFOW6RHYNBAZ, server: full, client: none,
+    table_id: 30797}
+secrets: {}
+renamed: true
