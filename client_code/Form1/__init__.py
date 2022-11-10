@@ -101,8 +101,17 @@ class Form1(Form1Template):
                 color='#808080'
             ),
         ))
-    
-   
+
+  
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    isVisible = self.column_panel_1.visible
+    if isVisible:
+      self.column_panel_1.visible = False
+    else:
+      self.column_panel_1.visible = True
+
+
 
 
 
