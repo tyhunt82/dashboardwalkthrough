@@ -15,6 +15,4 @@
       properties: {}
       name: navbar_links
       layout_properties: {slot: nav-right}
-    code: "from anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self,\
-      \ **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
-      \n    # Any code you write here will run when the form opens.\n    \n"
+    code: "from anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\n    # Any code you write here will run when the form opens.\n    \n"

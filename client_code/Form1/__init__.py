@@ -79,10 +79,10 @@ class Form1(Form1Template):
     # expand the graphs
     plot.layout = go.Layout(
         margin=dict(
-            l=50, #left margin
-            r=50, #right margin
-            b=50, #bottom margin
-            t=50, #top margin
+            l=20, #left margin
+            r=20, #right margin
+            b=20, #bottom margin
+            t=20, #top margin
         ),
         font=dict(family='Arial', size=10),
         xaxis=dict(
