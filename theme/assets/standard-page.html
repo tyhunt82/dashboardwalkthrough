@@ -41,7 +41,7 @@
   function showSidebar() {
     var ln = $('.structure > .nav-holder > .left-nav');
     $('.nav-shield').addClass("shown");
-    ln.addClass("shown").removeClass("hidden").css({left: "-100%"}).css({left: -ln.outerWidth()}).animate({left: 0}, function() {
+    ln.addClass("shown").removeClass("hidden").css({left: "-100%"}).css({left: -ln.outerWidth()}).animate({left: 50}, function() {
       ln.removeClass("in-transition");
     });
   }

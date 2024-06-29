@@ -43,7 +43,6 @@ class Form1(Form1Template):
     max_signups = sorted(signups, key=lambda x: x['signups'], reverse=True)[0]
     self.signups_label.text = "%s, %d" % (max_signups['date'].strftime("%d %b %Y"), max_signups['signups'])
 
-     
   def build_marketing_graph(self):
     marketing_data = anvil.server.call('get_marketing_data')
     self.plot_3.data = go.Scatter(x = [x['strategy'] for x in marketing_data],
@@ -102,7 +101,6 @@ class Form1(Form1Template):
             ),
         ))
 
-  
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     isVisible = self.column_panel_1.visible
@@ -110,6 +108,13 @@ class Form1(Form1Template):
       self.column_panel_1.visible = False
     else:
       self.column_panel_1.visible = True
+
+  def refresh_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.alert('You are about to refresh the app?', dismissible=True)
+
+    
+    
 
 
 

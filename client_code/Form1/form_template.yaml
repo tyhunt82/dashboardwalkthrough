@@ -3,7 +3,7 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"BNRDLT":15,"ZDTODK":15,"ALKAOB":15,"PVRIBP":15}', col_spacing: small}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -63,13 +63,15 @@ components:
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
     name: card_4
-    layout_properties: {grid_position: 'HPJDEK,XCBAHY', full_width_row: true}
+    layout_properties: {grid_position: 'HPJDEK,XCBAHY', full_width_row: true, row_background: 'theme:White'}
     components:
     - type: Plot
-      properties: {height: 270}
+      properties: {height: 270, tooltip: Plotly Graph}
       name: plot_1
-      layout_properties: {grid_position: 'LFQCZD,DVQKEA'}
+      layout_properties: {grid_position: 'LFQCZD,DVQKEA', row_background: 'theme:Secondary 700'}
       event_bindings: {click: plot_1_click}
+      data_bindings:
+      - {property: data, code: '', writeback: false}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
     name: card_1
@@ -120,10 +122,15 @@ components:
   layout_properties: {slot: top-left-btn}
   event_bindings: {hide: link_1_hide, click: link_1_click}
 - type: ColumnPanel
-  properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: large, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
+  properties: {role: null, col_widths: '{}', spacing_above: medium, background: '', wrap_on: mobile, col_spacing: large, foreground: '', spacing_below: medium, visible: true, border: '', tooltip: ''}
   name: column_panel_1
   layout_properties: {slot: left-nav}
   components:
+  - name: refresh
+    properties: {text: Refresh, background: '', foreground: '', icon: 'fa:area-chart', italic: false, underline: false, tooltip: Click to refresh}
+    type: Button
+    layout_properties: {grid_position: 'NBMLSK,BSXVAU', full_width_row: true}
+    event_bindings: {click: refresh_click}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}', visible: true, col_spacing: small}
     name: card_9
